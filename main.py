@@ -8,7 +8,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 def send_welcome(message):
   bot.reply_to(message, "Привет! Я твой помощниу по бюджету! $$$")
 
-@bit.message_handler(func=lambda message: True)
+@bot.message_handler(func=lambda message: True)
 def echo_all(message):
   bot.reply_to(message, f"Ты написала: {message.text}")
 
